@@ -30,7 +30,8 @@ function Login() {
 
     try {
       const response = await fetch(
-        `${apiURL}/_functions/login`,
+      //  `${apiURL}/_functions/login`,
+      `${apiURL}/_functions/allUsers`,
         {
           method: "GET",
           headers: headers,
