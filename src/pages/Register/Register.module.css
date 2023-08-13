@@ -1,0 +1,243 @@
+.OuterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  flex-direction: row;
+  font-family: "Hammersmith One";
+}
+
+.LeftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.RightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.RegisterFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.RegisterFormContainer h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  margin-left: 5em;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.labelContainer label {
+  font-size: 1.2rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.inputContainer input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.2rem;
+}
+
+.Form__Input::placeholder {
+  font-size: 1.5em;
+}
+
+.Form__Button {
+  background-color: #a7b3a1;
+  border: none;
+  border-radius: 1em;
+  width: 10em;
+  height: 3em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1.5em;
+}
+
+.Form__Button:hover {
+  transition: 0.3s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.kreiFoto {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loginGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -8em;
+}
+
+.loginGoogle h1:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: underline;
+  color: #b3a1a1;
+}
+
+.loginGoogle h1 {
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.loginGoogle h1::before,
+.loginGoogle h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%; /* Adjust the width of the lines as needed */
+  height: 1px; /* Increase the thickness of the lines */
+  background-color: #000; /* Line color */
+}
+
+.loginGoogle h1::before {
+  left: -55%; /* Position the line on the left side */
+  transform: translate(0, -50%);
+}
+
+.loginGoogle h1::after {
+  right: -55%; /* Position the line on the right side */
+  transform: translate(0, -50%);
+}
+
+.googleImg {
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.googleImg:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  scale: 1.1;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  .OuterContainer {
+    flex-direction: column;
+    position: relative;
+    margin-top: 8em;
+  }
+
+  .LeftContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: -1em;
+  }
+
+  .RightContainer {
+    display: none;
+  }
+
+  .RegisterFormContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .FormContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+
+  .labelContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .labelContainer label {
+    font-size: 1.2rem;
+  }
+
+  .inputContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .inputContainer input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+  }
+
+  .Form__Input::placeholder {
+    font-size: 1.5em;
+  }
+
+  .Form__Button {
+    background-color: #a7b3a1;
+    border: none;
+    border-radius: 1em;
+    width: 10em;
+    height: 3em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .loginGoogle h1 {
+    display: none;
+  }
+
+  .loginGoogle {
+    width: 100%;
+    margin-top: 2em;
+  }
+}

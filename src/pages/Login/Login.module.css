@@ -1,0 +1,211 @@
+.LoginFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  position: fixed;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60em;
+  height: 30em;
+  font-family: "Hammersmith One";
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.LoginForm h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+
+.Form__Group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form__Label {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.Form__InputsContainer {
+  margin: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.Form__Label {
+  font-size: 1.5em;
+}
+
+.Form__InputContainer {
+  display: flex;
+}
+
+.Form__Input {
+  width: 30em;
+  height: 2em;
+  outline: none;
+  padding-left: 1em;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.Form__Input:focus {
+  border-bottom: 2px solid #000;
+}
+
+.Form__Input::placeholder {
+  font-size: 1.5em;
+}
+
+.Form__Button {
+  border: none;
+  border-radius: 1em;
+  width: 10em;
+  height: 3em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1em;
+  background-color: #b3a1a1;
+}
+
+.Form__Button:hover {
+  transition: 0.3s;
+  scale: 1.1;
+  cursor: pointer;
+  background-color: #a7b3a1;
+}
+
+.loginGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 8em;
+}
+
+.loginGoogle h1 {
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.loginGoogle h1::before,
+.loginGoogle h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%; /* Adjust the width of the lines as needed */
+  height: 1px; /* Increase the thickness of the lines */
+  background-color: #000; /* Line color */
+}
+
+.loginGoogle h1::before {
+  left: -55%; /* Position the line on the left side */
+  transform: translate(0, -50%);
+}
+
+.loginGoogle h1::after {
+  right: -55%; /* Position the line on the right side */
+  transform: translate(0, -50%);
+}
+
+.googleImg {
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.googleImg:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  scale: 1.1;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  .LoginFormContainer {
+    width: 100%;
+    height: 100%;
+    top: 5.5em;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .LoginForm {
+    width: 100%;
+    height: 100%;
+  }
+
+  .LoginForm h1 {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+  }
+
+  .Form__Group {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Form__Label {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .Form__Input {
+    width: 100%;
+    height: 1em;
+  }
+  .Form__InputsContainer {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Form__Button {
+    width: 10em;
+    height: 3em;
+    font-size: 1.5rem;
+  }
+
+  .loginGoogle {
+    width: 100%;
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .loginGoogle h1 {
+    font-size: 1rem;
+    margin-bottom: 2em;
+  }
+
+  .googleImg {
+    margin-right: 1em;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 8em;
+  }
+}
