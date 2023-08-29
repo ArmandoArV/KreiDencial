@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Login from "./pages/Login/Login";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
@@ -10,13 +9,18 @@ import Profile from "./pages/Profile/Profile";
 function App() {
   return (
     <>
-      <Router
-      >
-        <Routes
-        >
+      <Router>
+        <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute redirectTo="/">
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Router>
     </>

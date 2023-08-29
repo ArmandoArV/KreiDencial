@@ -24,24 +24,27 @@ function Login() {
 
     const authHeader = btoa(`${matricula}:${password}`);
     const headers = new Headers({
-      Authorization: `Basic ${authHeader}`,
-      AccessControlAllowOrigin: "*",
+      //Authorization: `Basic ${authHeader}`,
+      // AccessControlAllowOrigin: "*",
+      "Content-Type": "application/json",
     });
 
     try {
-      const response = await fetch(
-      //  `${apiURL}/_functions/login`,
-      `${apiURL}/_functions/allUsers`,
-        {
-          method: "GET",
-          headers: headers,
-        }
-      );
+      const response = await fetch(`${apiURL}/_functions/login`, {
+        method: "OPTIONS",
+        //  headers: headers,
+        body: JSON.stringify({
+          matricula: matricula,
+          password: password,
+        }),
+      });
 
       if (response.ok) {
-        console.log("Successful login");
+        console.log("Successful login request");
+        const data = await response.json();
+        console.log(data);
       } else {
-        console.log("Unsuccessful login");
+        console.log("Unsuccessful OPTIONS request");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -86,6 +89,7 @@ function Login() {
             </button>
           </div>
         </form>
+        {/*
         <div className={styles.loginGoogle}>
           <h1>O iniciar sesión con</h1>
           <div className={styles.googleButton}>
@@ -97,6 +101,7 @@ function Login() {
             />
           </div>
         </div>
+        */}
       </div>
     </>
   );

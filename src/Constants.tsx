@@ -26,7 +26,7 @@ interface Medals {
   isActive: boolean;
 }
 
-export const apiURL = "https://deapco.wixsite.com";
+export const apiURL = "https://deapco.wixsite.com/kreidencial";
 
 export const routes: Routes = {
   HOME: [
